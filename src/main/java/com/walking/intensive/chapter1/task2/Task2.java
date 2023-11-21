@@ -51,6 +51,4 @@ public class Task2 {
 
         return apartNumber + " кв - " + entranceNum + " подъезд, " + floorNum + " этаж, " + apartLoc;
     }
-
-
 }
