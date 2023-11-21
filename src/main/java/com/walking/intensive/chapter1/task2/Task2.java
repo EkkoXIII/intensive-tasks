@@ -30,11 +30,10 @@ public class Task2 {
         }
 
         String apartLoc = switch (apartNumber % roomsPerFloor) {
-            case 0 -> "Справа от лифта, вправо";
+            default -> "Справа от лифта, вправо";
             case 1 -> "Слева от лифта, влево";
             case 2 -> "Слева от лифта, вправо";
             case 3 -> "Справа от лифта, влево";
-            default -> null;
         };
 
         int entranceNum = apartNumber / (roomsPerFloor * floorsQuantity);
