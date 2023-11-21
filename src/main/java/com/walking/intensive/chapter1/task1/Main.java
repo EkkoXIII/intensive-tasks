@@ -1,4 +1,4 @@
-package com.walking.intensive.chapter1.task1;
+package src.main.java.com.walking.intensive.chapter1.task1;
 
 import java.util.Scanner;
 
@@ -24,19 +24,20 @@ public class Main {
 
         if (((age % 100) > 10) && ((age % 100) < 20)) {
             return "Вам " + age + " лет";
-        } else {
-            switch (age % 10) {
-                case 1:
-                    return "Вам " + age + " год";
-                case 2:
-                case 3:
-                case 4: {
-                    return "Вам " + age + " года";
-                }
-                default: {
-                    return "Вам " + age + " лет";
-                }
+        }
+
+        switch (age % 10) {
+            case 1:
+                return "Вам " + age + " год";
+            case 2:
+            case 3:
+            case 4: {
+                return "Вам " + age + " года";
+            }
+            default: {
+                return "Вам " + age + " лет";
             }
         }
+
     }
 }
