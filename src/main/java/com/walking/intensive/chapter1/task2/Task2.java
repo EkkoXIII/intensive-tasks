@@ -22,18 +22,18 @@ public class Task2 {
         System.out.println(getRoomLocation(floorsQuantity, entrancesQuantity, apartNumber));
     }
 
-    static String getRoomLocation(int floorsQuantity, int entrancesQuantity, int apartNumber) {
+    public static String getRoomLocation(int floorsQuantity, int entrancesQuantity, int apartNumber) {
         int roomsPerFloor = 4;
 
         if ((apartNumber < 1) || (apartNumber > (roomsPerFloor * floorsQuantity * entrancesQuantity))) {
-            return "Такой квартиры в доме нет";
+            return "Такой квартиры не существует";
         }
 
         String apartLoc = switch (apartNumber % roomsPerFloor) {
-            default -> "Справа от лифта, вправо";
-            case 1 -> "Слева от лифта, влево";
-            case 2 -> "Слева от лифта, вправо";
-            case 3 -> "Справа от лифта, влево";
+            default -> "справа от лифта, вправо";
+            case 1 -> "слева от лифта, влево";
+            case 2 -> "слева от лифта, вправо";
+            case 3 -> "справа от лифта, влево";
         };
 
         int entranceNum = apartNumber / (roomsPerFloor * floorsQuantity);
