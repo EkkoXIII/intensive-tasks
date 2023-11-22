@@ -1,9 +1,9 @@
-package com.walking.intensive.chapter1.task3;
+package src.main.java.com.walking.intensive.chapter1.task2;
 
 /**
  * Условие: <a href="https://geometry-math.ru/homework/Java-leap-year.html">ссылка</a>
  */
-public class Main {
+public class Task2 {
     public static void main(String[] args) {
 //        Для собственных проверок можете делать любые изменения в этом методе
 
