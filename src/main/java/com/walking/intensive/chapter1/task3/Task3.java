@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Условие: <a href="https://geometry-math.ru/homework/Java-leap-year.html">ссылка</a>
  */
-public class Main {
+public class Task3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -21,7 +21,7 @@ public class Main {
         }
     }
 
-    static boolean isLeap(int year) {
-        return (year % 4 == 0) || ((year % 100 == 0) && (year % 400 == 0));
+    public static boolean isLeap(int year) {
+        return ((year % 4 == 0) && (year % 100 != 0)) || ((year % 100 == 0) && (year % 400 == 0));
     }
 }
