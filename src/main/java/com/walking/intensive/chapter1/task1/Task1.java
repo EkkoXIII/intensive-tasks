@@ -17,7 +17,7 @@ public class Task1 {
         System.out.println(getAgeString(age));
     }
 
-    static String getAgeString(int age) {
+    public static String getAgeString(int age) {
         if (age < 0) {
             return "Вы ввели неправильный возраст. Он должен быть больше нуля";
         }
