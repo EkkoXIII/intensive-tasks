@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Условие: <a href="https://geometry-math.ru/homework/Java-age.html">ссылка</a>
  */
-public class Main {
+public class Task1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
