@@ -35,8 +35,8 @@ public class Task5 {
     }
 
     public static double getAreaByHeron(double a, double b, double c) {
-        double halfmeter = (a + b + c) / 2;
-        return Math.sqrt(halfmeter * (halfmeter - a) * (halfmeter - b) * (halfmeter - c));
+        double halfMeter = (a + b + c) / 2;
+        return Math.sqrt(halfMeter * (halfMeter - a) * (halfMeter - b) * (halfMeter - c));
     }
 
     /**
@@ -74,7 +74,6 @@ public class Task5 {
      * Располагайте углы по возрастанию.
      */
     public static double[] getAngles(double a, double b, double c) {
-        double area = getAreaByHeron(a, b, c);
         double[] angles = {Math.toDegrees(Math.acos((a * a + c * c - b * b) / (2 * a * c))),
                            Math.toDegrees(Math.acos((a * a + b * b - c * c) / (2 * a * b))),
                            Math.toDegrees(Math.acos((b * b + c * c - a * a) / (2 * b * c)))};
