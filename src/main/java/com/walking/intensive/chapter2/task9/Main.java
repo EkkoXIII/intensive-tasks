@@ -44,8 +44,8 @@ public class Main {
     public static BigInteger getFactorial(int number) {
         if (number <= 1) {
             return BigInteger.valueOf(1);
-        } else {
-            return BigInteger.valueOf(number).multiply(getFactorial(number - 1));
         }
+
+        return BigInteger.valueOf(number).multiply(getFactorial(number - 1));
     }
 }
