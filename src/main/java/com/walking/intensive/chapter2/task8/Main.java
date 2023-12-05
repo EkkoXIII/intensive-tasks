@@ -8,17 +8,17 @@ public class Main {
     public static boolean isLuckyTicket(int ticketNumber) {
         int divisor = 10;
         int firstHalfSum = 0;
-        int secondHaldSum = 0;
+        int secondHalfSum = 0;
 
         for (int i = 0; i <= 5; i++) {
             if (i < 3) {
                 firstHalfSum += ticketNumber / (int) Math.pow(divisor, i) % divisor;
             } else {
-                secondHaldSum += ticketNumber / (int) Math.pow(divisor, i) % divisor;
+                secondHalfSum += ticketNumber / (int) Math.pow(divisor, i) % divisor;
             }
         }
 
-        return firstHalfSum == secondHaldSum;
+        return firstHalfSum == secondHalfSum;
     }
 
     public static double getSuccessProbability() {
