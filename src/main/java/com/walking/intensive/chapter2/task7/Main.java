@@ -23,11 +23,11 @@ public class Main {
         int result = 0;
 
         for (int i = 1; i <= maxInteger; i++) {
-            int friendlyNumberCandidate = getDivisorsSum(i);
+            int devisorsSum = getDivisorsSum(i);
 
-            if (isFriendlyPair(i, maxInteger) && i + friendlyNumberCandidate > maxSum && friendlyNumberCandidate < maxInteger) {
-                maxSum = i + friendlyNumberCandidate;
-                result = Math.max(i, friendlyNumberCandidate);
+            if (isFriendlyPair(i, maxInteger) && i + devisorsSum > maxSum && devisorsSum < maxInteger) {
+                maxSum = i + devisorsSum;
+                result = Math.max(i, devisorsSum);
             }
         }
 
@@ -39,11 +39,7 @@ public class Main {
 
         for (int i = 2; i <= Math.sqrt(number); i++) {
             if (number % i == 0) {
-                if (i == Math.sqrt(number)) {
-                    result += i;
-                } else {
-                    result += i + number / i;
-                }
+                result = (i == Math.sqrt(number)) ? result + i : result + i + number / i;
             }
         }
 
@@ -51,7 +47,7 @@ public class Main {
     }
 
     public static boolean isFriendlyPair(int number, int maxInteger) {
-        int friendlyNumberCandidate = getDivisorsSum(number);
-        return number != friendlyNumberCandidate && number == getDivisorsSum(friendlyNumberCandidate);
+        int devisorsSum = getDivisorsSum(number);
+        return number != devisorsSum && number == getDivisorsSum(devisorsSum);
     }
 }
